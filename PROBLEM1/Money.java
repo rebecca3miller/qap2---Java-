@@ -7,6 +7,12 @@ public class Money {
 
     // CONSTRUCTORS
 
+    public Money() 
+    {
+        this.dollars = 0;
+        this.cents = 0;
+    }
+
     public Money(double amount) 
     {
         // Default constructor that initializes dollars and cents to 0.

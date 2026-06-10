@@ -49,4 +49,5 @@ public class MyPoint {
      
      public String toString() {
         return "(" + x + ", " + y + ")";
+    }
 }

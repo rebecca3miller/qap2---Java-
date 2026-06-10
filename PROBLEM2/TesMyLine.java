@@ -19,6 +19,7 @@ public class TesMyLine {
 
     line1.setBeginXY(3, 4);
 
-    System/System.out.println("Updated Line: " + line1);
+    System.out.println("Updated Line: " + line1);
+
     }
 }

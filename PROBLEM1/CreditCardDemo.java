@@ -10,22 +10,21 @@ public static void main (String [] args) {
     final Money THIRD_AMOUNT = new Money(25); 
     final Money FOURTH_AMOUNT = new Money(990);
 
-    Person owner = new Person(“Christie”, “Diane”, 
-    new Address(“237J Harvey Hall”,”Menomonie”, 
-    “WI” , “54751”)); 
+    Person owner = new Person("Christie", "Diane", new Address("2373 Harvey Hall", "Menomonie", "WI", "54751"));
 
     CreditCard visa = new CreditCard(owner, LIMIT, new Money(0)); 
     System.out.println(visa.getPersonals()); 
-    System.out.println(“Balance: ” + visa.getBalance()); 
-    System.out.println(“Credit Limit : ” + visa.getCreditLimit()); 
-    System.out.println(); System.out.println(“Attempt to charge ” + FIRST_AMOUNT);
+    System.out.println("Balance: " + visa.getBalance()); 
+    System.out.println("Credit Limit: " + visa.getCreditLimit()); 
+    System.out.println(); 
+    System.out.println("Attempt to charge" + FIRST_AMOUNT);
 
     visa.charge(FIRST_AMOUNT); 
-    System.out.println(“Balance : ” + visa.getBalance()); 
-    System.out.println(“Attempt to charge ” + SECOND_AMOUNT); 
+    System.out.println("Balance : " + visa.getBalance()); 
+    System.out.println("Attempt to charge " + SECOND_AMOUNT); 
     visa.charge(SECOND_AMOUNT); 
-    System.out.println(“Balance : ” + visa.getBalance()); 
-    System.out.println(“Attempt to pay ” + THIRD_AMOUNT); 
+    System.out.println("Balance : " + visa.getBalance()); 
+    System.out.println("Attempt to pay " + THIRD_AMOUNT); 
     visa.payment(THIRD_AMOUNT);
 
     System.out.println("Balance : " + visa.getBalance());

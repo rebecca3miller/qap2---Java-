@@ -1,5 +1,7 @@
 public class MyLine {
-    private MyPoint start;
+
+    // Instances 
+    private MyPoint begin;
     private MyPoint end;
 
     public MyLine(int x1, int y1, int x2, int y2) {
@@ -81,7 +83,11 @@ public class MyLine {
     }
 
     public double getGradient() {
-        return Math.atan2(end.getY() - begin.getY(), end.getX() - begin.getX());
+
+        int yDiff = end.getY() - begin.getY();
+        int xDiff = end.getX() - begin.getX();
+
+        return Math.atan2(yDiff, xDiff);
     }
 
     public String toString() {
