@@ -5,6 +5,12 @@ public class MyPoint {
     private int y;
 
     // constructor.
+    public MyPoint()
+    {
+        x = 0;
+        y = 0;
+    }
+
     public MyPoint(int x, int y) {
         this.x = x;
         this.y = y;
@@ -27,10 +33,12 @@ public class MyPoint {
         this.y = y;
     }
 
+    // get both coordinates
     public int[] getXY() {
         return new int[]{x, y};
     }
 
+    // set both coordinates
     public void setXY(int x, int y) {
         this.x = x;
         this.y = y;
