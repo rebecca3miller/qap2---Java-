@@ -1,14 +1,19 @@
 public class TestMyRectangle {
     
     public static void main(String[] args) {
-        
-        MyRectangle rec1 = new MyRectangle(1, 8, 6, 2);
 
-        System.err.println(rec1);
-        System.err.println("Width: " + rec1.getWidth());
-        System.err.println("Height: " + rec1.getHeight());
-        System.err.println("Area: " + rec1.getArea());
-        System.err.println("Perimeter: " + rec1.getPerimeter());
+        MyPoint topLeft = new MyPoint(1, 8);
+        MyPoint bottomRight = new MyPoint(6, 2);
+        
+        MyRectangle rect = new MyRectangle(topLeft, bottomRight);
+
+        System.out.println(rect);
+
+        System.out.println(rec1);
+        System.out.println("Width: " + rect.getWidth());
+        System.out.println("Height: " + rect.getHeight());
+        System.out.println("Area: " + rect.getArea());
+        System.out.println("Perimeter: " + rect.getPerimeter());
 
     }
 }
