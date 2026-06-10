@@ -1,9 +1,10 @@
 public class MyLine {
 
-    // Instances 
+    // private Instance variables
     private MyPoint begin;
     private MyPoint end;
 
+    // constructors
     public MyLine(int x1, int y1, int x2, int y2) {
         begin = new MyPoint(x1, y1);
         end = new MyPoint(x2, y2);
@@ -14,6 +15,7 @@ public class MyLine {
         this.end = end;
     }
 
+    // getter and setter methods.
     public MyPoint getBegin() {
         return begin;
     }
@@ -90,6 +92,7 @@ public class MyLine {
         return Math.atan2(yDiff, xDiff);
     }
 
+    // string method
     public String toString() {
         return "MyLine[begin=" + begin + ", end=" + end + "]";
     }

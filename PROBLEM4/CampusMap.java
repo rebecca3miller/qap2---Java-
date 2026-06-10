@@ -1,11 +1,21 @@
-import java.util.ArrayList;
+import java.util.ArrayList; // calling this imports Arraylist class from the java.util package.
 
 public class CampusMap {
     
+    // private instance variables.
     private ArrayList<MyLine> walkways;
     private ArrayList<MyRectangle> buildings;
     private ArrayList<MyCircle> roundabouts;
 
+    // constructor
+    public CampusMap()
+    {
+        buildings = new ArrayList<MyRectangle>();
+        walkways = new ArrayList<MyLine>();
+        roundabouts = new ArrayList<MyCircle>();
+    }
+
+    // add method
     public void addBuilding(MyRectangle building) {
         buildings.add(building);
     }
@@ -18,6 +28,7 @@ public class CampusMap {
         roundabouts.add(roundabout);
     }
 
+    // display method.
     public void displayMap()
     {
         System.out.println("Buildings:");

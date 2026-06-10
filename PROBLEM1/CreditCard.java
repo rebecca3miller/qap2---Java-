@@ -1,8 +1,11 @@
 public class CreditCard {
+
+    // Private instance variables.
     private Money balance;
     private Money creditLimit;
     private Person owner;
 
+    // constructor.
     public CreditCard(Person newCardHolder, Money limit, Money money)
     {
         this.owner = newCardHolder;
@@ -10,6 +13,7 @@ public class CreditCard {
         this.balance = money;
     }
 
+    // getter method.
     public Money getBalance()
     {
         return balance;

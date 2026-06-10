@@ -4,6 +4,7 @@ public class MyLine {
     private MyPoint begin;
     private MyPoint end;
 
+    // CONSTRUCTORS.
     public MyLine(int x1, int y1, int x2, int y2) {
         begin = new MyPoint(x1, y1);
         end = new MyPoint(x2, y2);
@@ -14,6 +15,7 @@ public class MyLine {
         this.end = end;
     }
 
+    // Getter methods.
     public MyPoint getBegin() {
         return begin;
     }
@@ -50,6 +52,7 @@ public class MyLine {
         return end.getX();
     }
 
+    // Setter methods
     public void setEndX(int x) {
         end.setX(x);
     }
@@ -78,6 +81,7 @@ public class MyLine {
         end.setXY(x, y);
     }
 
+    // getting length and gradient
     public double getLength() {
         return begin.distance(end);
     }
@@ -90,6 +94,7 @@ public class MyLine {
         return Math.atan2(yDiff, xDiff);
     }
 
+    // method.
     public String toString() {
         return "MyLine[begin=" + begin + ", end=" + end + "]";
     }

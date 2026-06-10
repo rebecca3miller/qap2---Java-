@@ -1,11 +1,13 @@
 public class TesMyLine {
     public static void main(String[] args) {
 
+    // only when you create an object, the compiler will allocate memory for the attributes of the class and you can use them.
     MyPoint P1 = new MyPoint(1, 2);
     MyPoint P2 = new MyPoint(5, 6);
 
     MyLine line1 = new MyLine(P1, P2);
 
+    // Print statements so that we can display output.
     System.out.println(line1);
 
     System.out.println("Begin X: " + line1.getBeginX());

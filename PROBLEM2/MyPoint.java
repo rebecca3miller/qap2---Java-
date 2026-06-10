@@ -1,12 +1,16 @@
 public class MyPoint {
+
+    // private instance variables
     private int x;
     private int y;
 
+    // constructor.
     public MyPoint(int x, int y) {
         this.x = x;
         this.y = y;
     }   
 
+    // getter and setter methods.
     public int getX() {
         return x;
     }
@@ -32,6 +36,7 @@ public class MyPoint {
         this.y = y;
     }
 
+    // method.
     public double distance(int x, int y)
      {
         return Math.sqrt((this.x - x) * (this.x - x) + (this.y - y) * (this.y - y));

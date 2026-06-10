@@ -12,6 +12,7 @@ public class TestCampusMap {
 
         MyCircle fountain = new MyCircle(new MyPoint(8, 8), 3);
 
+        // method call.
         map.addBuilding(building1);
         map.addBuilding(building2);
         map.addWalkway(walkway1);

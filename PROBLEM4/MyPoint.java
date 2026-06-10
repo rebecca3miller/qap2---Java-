@@ -1,7 +1,10 @@
 public class MyPoint {
+
+    // private instance variables.
     private int x;
     private int y;
 
+    //constructors
     public MyPoint() 
     {
         x = 0;
@@ -15,6 +18,7 @@ public class MyPoint {
         this.y = y;
     }   
 
+    // getter and setter methods
     public int getX() 
     {
         return x;
@@ -35,7 +39,7 @@ public class MyPoint {
         this.y = y;
     }
 
-     
+    // string method.
     public String toString() {
         return "(" + x + ", " + y + ")";
     }
