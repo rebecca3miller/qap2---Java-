@@ -1,46 +1,66 @@
 public class MyPoint {
 
-    // private instance variables.
+    // private instance variables
     private int x;
     private int y;
 
-    //constructors
-    public MyPoint() 
+    // constructor.
+    public MyPoint()
     {
         x = 0;
         y = 0;
     }
 
-
-    public MyPoint(int x, int y) 
-    {
+    public MyPoint(int x, int y) {
         this.x = x;
         this.y = y;
     }   
 
-    // getter and setter methods
-    public int getX() 
-    {
+    // getter and setter methods.
+    public int getX() {
         return x;
     }
 
-    public void setX(int x) 
-    {
+    public void setX(int x) {
         this.x = x;
     }
 
-    public int getY() 
-    {
+    public int getY() {
         return y;
     }
 
-    public void setY(int y) 
-    {
+    public void setY(int y) {
         this.y = y;
     }
 
-    // string method.
-    public String toString() {
+    // get both coordinates
+    public int[] getXY() {
+        return new int[]{x, y};
+    }
+
+    // set both coordinates
+    public void setXY(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // method.
+    public double distance(int x, int y)
+     {
+        return Math.sqrt((this.x - x) * (this.x - x) + (this.y - y) * (this.y - y));
+     }
+
+     public double distance(MyPoint another)
+     {
+        return Math.sqrt((this.x - another.x) * (this.x - another.x) + (this.y - another.y) * (this.y - another.y));
+     }
+
+     public double distance() 
+     {
+        return Math.sqrt(x * x + y * y);
+     }
+     
+     public String toString() {
         return "(" + x + ", " + y + ")";
     }
 }
