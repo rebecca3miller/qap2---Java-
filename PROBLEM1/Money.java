@@ -52,4 +52,9 @@ public class Money {
         return (this.dollars == otherObject.dollars) && (this.cents == otherObject.cents);
     }
 
+    public String toString()
+    {
+        return String.format("$%d.%02d", dollars, cents);
+    }
+
 }
