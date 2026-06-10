@@ -10,8 +10,8 @@ public class Money {
     public Money(double amount) 
     {
         // Default constructor that initializes dollars and cents to 0.
-        this.dollars = 0;
-        this.cents = 0;
+        this.dollars = (long) amount;
+        this.cents = (int) ((amount - this.dollars) * 100);
     }
 
     public Money(Money otherObject) 
@@ -20,14 +20,21 @@ public class Money {
         this.cents = otherObject.cents;
     }
 
-    public Money(Money otherAmount)
+    public Money add(Money otherAmount)
     {
-        return(otherAmount.dollars + otherAmount.cents);
+        Money result = new Money();
+
+        result.dollars = this.dollars + otherAmount.dollars;
+        result.cents = this.cents + otherAmount.cents;
+        return result;
     }
 
-    public Money(Money otherAmount)
+    public Money subtract(Money otherAmount)
     {
-        return(otherAmount.dollars - otherAmount.cents);
+        Money result = new Money();
+        result.dollars = this.dollars - otherAmount.dollars;
+        result.cents = this.cents - otherAmount.cents;
+        return result;
     }
 
     public int compareTo(Money otherObject)

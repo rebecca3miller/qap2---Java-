@@ -3,12 +3,11 @@ public class CreditCard {
     private Money creditLimit;
     private Person owner;
 
-    public CreditCard(Person newCardHolder, Money Limit, Money Money)
+    public CreditCard(Person newCardHolder, Money limit, Money money)
     {
         this.owner = newCardHolder;
-        this.creditLimit = Limit;
-        this.balance = Money;
-
+        this.creditLimit = limit;
+        this.balance = money;
     }
 
     public Money getBalance()
@@ -29,7 +28,7 @@ public class CreditCard {
     public void charge(Money amount)
     {
         if (balance.compareTo(creditLimit) < 0) {
-            balance = balance + amount;
+            balance = balance.add(amount);
         } else {
             System.out.println("Charge denied: credit limit exceeded.");
         }
@@ -37,6 +36,6 @@ public class CreditCard {
 
     public void payment(Money amount)
     {
-        balance = balance - amount;
+        balance = balance.subtract(amount);
     }
 }
