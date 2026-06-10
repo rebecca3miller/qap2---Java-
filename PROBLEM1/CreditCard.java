@@ -31,10 +31,12 @@ public class CreditCard {
 
     public void charge(Money amount)
     {
+        Money newBalance = balance.add(amount);
+
         if (balance.compareTo(creditLimit) < 0) {
-            balance = balance.add(amount);
+            balance = newBalance;
         } else {
-            System.out.println("Charge denied: credit limit exceeded.");
+            System.out.println("Exceeds credit limit");
         }
     }
 

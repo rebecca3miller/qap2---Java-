@@ -10,7 +10,7 @@ public static void main (String [] args) {
     final Money THIRD_AMOUNT = new Money(25); 
     final Money FOURTH_AMOUNT = new Money(990);
 
-    Person owner = new Person("Christie", "Diane", new Address("2373 Harvey Hall", "Menomonie", "WI", "54751"));
+    Person owner = new Person("Christie", "Diane", new Address("237J Harvey Hall", "Menomonie", "WI", "54751"));
 
     CreditCard visa = new CreditCard(owner, LIMIT, new Money(0)); 
     System.out.println(visa.getPersonals()); 
