@@ -32,7 +32,7 @@ public class Money {
 
         result.dollars = this.dollars + otherAmount.dollars;
         result.cents = this.cents + otherAmount.cents;
-        return result;
+        return result; 
     }
 
     public Money subtract(Money otherAmount)

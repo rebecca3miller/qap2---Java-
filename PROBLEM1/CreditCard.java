@@ -33,7 +33,7 @@ public class CreditCard {
     {
         Money newBalance = balance.add(amount);
 
-        if (balance.compareTo(creditLimit) < 0) {
+        if (newBalance.compareTo(creditLimit) <= 0) {
             balance = newBalance;
         } else {
             System.out.println("Exceeds credit limit");
